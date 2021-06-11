@@ -1,47 +1,45 @@
 <?php
 
-    $name1 = "Mario";
-    $name2 = "Luigi";
+// INDEXED ARRAYS
 
-    echo $name1.$name2; //ok lang kung may spaces before and after ng .
+$peopleOne = ['Jesus', 'Maria', 'Joseph'];
+//echo $peopleOne[2]; //output Joseph
 
-        echo "<br>"; //line break
+$peopleTwo = array('Judas', 'Mark', 'Maleficent');
+//echo $peopleTwo[1]; //output Mark
 
-    echo 'My name is ' . $name1;
+$ages = [20, 30, 40, 50];
+//print_r($ages); //outputs the contents of the array
 
-        echo "<br>"; 
+$ages[1] = 25; //overwrites index 1
+//print_r($ages); 
 
-    echo "My name is $name2";
+$ages[] = 60; //dagdag sa dulo
+//print_r($ages); 
 
-        echo "<br>"; 
-    
-    echo "I want \"oreos\""; 
-    
-        echo "<br>"; 
+array_push($ages, 70); //dagdag sa dulo
+//print_r($ages); 
 
-    echo 'I want "oreos"';
+//echo count($ages); //output is 6 because 20, 25, 40, 50, 60, 70
 
-            echo "<br>"; 
+$peopleThree = array_merge($peopleOne, $peopleTwo);
+//print_r($peopleThree);
 
-    echo $name1[2]; //get the 3rd character
 
-        echo "<br>"; 
+// =========================================================================
 
-    echo strlen($name1); //get the string length
 
-        echo "<br>";
-    
-    echo strtoupper($name1); //make uppercase
-    
-        echo "<br>"; 
+// ASSOCIATIVE ARRAYS (KEY & VALUE PAIRS)
 
-    echo strtolower($name1); //make lowercase
+$animalsOne = ['mammal'=>'monkey', 'fish'=>'bangus', 'insect'=>'fly'];
+//echo $animalsOne['fish']; //output bangus
+//print_r($animalsOne);
 
-        echo "<br>";
-    
-    echo str_replace('m', 'r', $name1); //replace characters to other char
-    
-        echo "<br>"; 
+$animalsTwo = array('bird'=>'parrot', 'amphibian'=>'frog');
+
+$animalsTwo['panget']='human'; //dagdag sa dulo
+//print_r($animalsTwo);
+
 
 ?>
 
