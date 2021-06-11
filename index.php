@@ -1,44 +1,33 @@
 <?php
 
-// INDEXED ARRAYS
+// MULTI-DIMENSIONAL ARRAYS
 
-$peopleOne = ['Jesus', 'Maria', 'Joseph'];
-//echo $peopleOne[2]; //output Joseph
+/*
+$blogs = [
 
-$peopleTwo = array('Judas', 'Mark', 'Maleficent');
-//echo $peopleTwo[1]; //output Mark
+    //indexed
+    ['Cute Cats', 'Mochi', 'Lorem', 69],
+    ['Bad Dogs', 'Spark', 'Lorem', 21],
+    ['Top 10 Best Cat Toys', 'Cole', 'Lorem', 50]
+];
 
-$ages = [20, 30, 40, 50];
-//print_r($ages); //outputs the contents of the array
+print_r($blogs[2][1]); // outputs Cole
 
-$ages[1] = 25; //overwrites index 1
-//print_r($ages); 
+*/
 
-$ages[] = 60; //dagdag sa dulo
-//print_r($ages); 
+$blogs = [
 
-array_push($ages, 70); //dagdag sa dulo
-//print_r($ages); 
+    //associative
+    ['title' => 'Cute Cats', 'author' => 'Mochi', 'content' => 'Lorem', 'likes' => 69],
+    ['title' => 'Bad Dogs', 'author' => 'Spark', 'content' => 'Lorem', 'likes' => 21],
+    ['title' => 'Top 10 Best Cat Toys', 'author' => 'Cole', 'content' => 'Lorem', 'likes' => 50]
+];
 
-//echo count($ages); //output is 6 because 20, 25, 40, 50, 60, 70
+//echo $blogs[1]['likes']; //output 21
+//echo count($blogs); //output 3
 
-$peopleThree = array_merge($peopleOne, $peopleTwo);
-//print_r($peopleThree);
-
-
-// =========================================================================
-
-
-// ASSOCIATIVE ARRAYS (KEY & VALUE PAIRS)
-
-$animalsOne = ['mammal'=>'monkey', 'fish'=>'bangus', 'insect'=>'fly'];
-//echo $animalsOne['fish']; //output bangus
-//print_r($animalsOne);
-
-$animalsTwo = array('bird'=>'parrot', 'amphibian'=>'frog');
-
-$animalsTwo['panget']='human'; //dagdag sa dulo
-//print_r($animalsTwo);
+$popped = array_pop($blogs); //remove last array
+print_r($popped);
 
 
 ?>
