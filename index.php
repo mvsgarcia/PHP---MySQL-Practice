@@ -1,8 +1,47 @@
 <?php
 
-    define('NAME', 'Maurer');
-    $name = "Mario";
-    $age = 30;
+    $name1 = "Mario";
+    $name2 = "Luigi";
+
+    echo $name1.$name2; //ok lang kung may spaces before and after ng .
+
+        echo "<br>"; //line break
+
+    echo 'My name is ' . $name1;
+
+        echo "<br>"; 
+
+    echo "My name is $name2";
+
+        echo "<br>"; 
+    
+    echo "I want \"oreos\""; 
+    
+        echo "<br>"; 
+
+    echo 'I want "oreos"';
+
+            echo "<br>"; 
+
+    echo $name1[2]; //get the 3rd character
+
+        echo "<br>"; 
+
+    echo strlen($name1); //get the string length
+
+        echo "<br>";
+    
+    echo strtoupper($name1); //make uppercase
+    
+        echo "<br>"; 
+
+    echo strtolower($name1); //make lowercase
+
+        echo "<br>";
+    
+    echo str_replace('m', 'r', $name1); //replace characters to other char
+    
+        echo "<br>"; 
 
 ?>
 
@@ -17,11 +56,5 @@
 </head>
 <body>
     
-    <h1>User Profile Page</h1>
-
-    <div> <?php echo NAME; ?></div>
-    <div> <?php echo $name; ?> </div>
-    <div> <?php echo $age; ?> </div>
-
 </body>
 </html>
