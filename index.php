@@ -1,34 +1,47 @@
 <?php
 
-// MULTI-DIMENSIONAL ARRAYS
+$peoples = ['Jesus', 'Maria', 'Jose'];
 
-/*
-$blogs = [
+// for($i=0; $i<count($peoples); $i++){
 
-    //indexed
-    ['Cute Cats', 'Mochi', 'Lorem', 69],
-    ['Bad Dogs', 'Spark', 'Lorem', 21],
-    ['Top 10 Best Cat Toys', 'Cole', 'Lorem', 50]
+//     echo $peoples[$i] . "<br>";
+
+// }
+
+// foreach($peoples as $people){
+
+//     echo $people . "<br>";  
+
+// }
+
+
+$cats = [
+
+    ['name' => 'Mochi', 'age' => 7 ],
+    ['name' => 'Cole', 'age' =>  10],
+    ['name' => 'Ishnow', 'age' => 9 ],
+    ['name' => 'Appy', 'age' => 12 ],
+    ['name' => 'Bien', 'age' => 69]
 ];
 
-print_r($blogs[2][1]); // outputs Cole
+// foreach($cats as $cat){
 
-*/
+//     echo $cat['name'] . ' - ' . $cat['age'];
+//     echo '<br>';
 
-$blogs = [
+// }
 
-    //associative
-    ['title' => 'Cute Cats', 'author' => 'Mochi', 'content' => 'Lorem', 'likes' => 69],
-    ['title' => 'Bad Dogs', 'author' => 'Spark', 'content' => 'Lorem', 'likes' => 21],
-    ['title' => 'Top 10 Best Cat Toys', 'author' => 'Cole', 'content' => 'Lorem', 'likes' => 50]
-];
 
-//echo $blogs[1]['likes']; //output 21
-//echo count($blogs); //output 3
+// $i=0;
 
-$popped = array_pop($blogs); //remove last array
-print_r($popped);
+// while($i<count($cats)){
 
+//     echo $cats[$i]['name'] .  ' - ' . $cats[$i]['age'];
+//     echo '<br>';
+
+//     $i++;
+
+// }
 
 ?>
 
@@ -42,6 +55,17 @@ print_r($popped);
     <title>PHP Tutorials</title>
 </head>
 <body>
-    
+
+<h1>Cats ng Pinas</h1>
+
+<ul>
+    <?php foreach($cats as $cat){ ?>
+
+        <h3><?php echo $cat['name']; ?></h3>
+        <p>Age -  <?php echo $cat['age']; ?></p>
+
+    <?php } ?>
+</ul>
+
 </body>
 </html>
