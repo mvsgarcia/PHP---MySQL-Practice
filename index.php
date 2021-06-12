@@ -1,47 +1,19 @@
 <?php
 
-$peoples = ['Jesus', 'Maria', 'Jose'];
+function sayHello($name = 'shaun', $time = 'morning'){
+    echo "Good $time $name" . '<br>';
+}
 
-// for($i=0; $i<count($peoples); $i++){
+sayHello('Mieca', 'night');
 
-//     echo $peoples[$i] . "<br>";
+//========================================
 
-// }
+function formatProduct($product){
+    return "{$product['name']} cost Php{$product['price']} to buy";
+}
 
-// foreach($peoples as $people){
-
-//     echo $people . "<br>";  
-
-// }
-
-
-$cats = [
-
-    ['name' => 'Mochi', 'age' => 7 ],
-    ['name' => 'Cole', 'age' =>  10],
-    ['name' => 'Ishnow', 'age' => 9 ],
-    ['name' => 'Appy', 'age' => 12 ],
-    ['name' => 'Bien', 'age' => 69]
-];
-
-// foreach($cats as $cat){
-
-//     echo $cat['name'] . ' - ' . $cat['age'];
-//     echo '<br>';
-
-// }
-
-
-// $i=0;
-
-// while($i<count($cats)){
-
-//     echo $cats[$i]['name'] .  ' - ' . $cats[$i]['age'];
-//     echo '<br>';
-
-//     $i++;
-
-// }
+$formatted = formatProduct(['name'=>'Sorbetes', 'price'=>20]);
+echo $formatted;
 
 ?>
 
@@ -55,17 +27,5 @@ $cats = [
     <title>PHP Tutorials</title>
 </head>
 <body>
-
-<h1>Cats ng Pinas</h1>
-
-<ul>
-    <?php foreach($cats as $cat){ ?>
-
-        <h3><?php echo $cat['name']; ?></h3>
-        <p>Age -  <?php echo $cat['age']; ?></p>
-
-    <?php } ?>
-</ul>
-
 </body>
 </html>
